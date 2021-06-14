@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-content d-flex">
+
+<!----------------------------------------- ASIDE PROJECTS -->
+
+      <div class="aside-projects box-shadow d-flex">
+        <h1 class="main-title padding">To-do list.</h1>
+        <ul class="d-flex flex-column">
+          <li class="project-item">To-dos without project</li>
+          <li class="project-item">A project item</li>
+          <li class="project-item">A project item</li>
+          <li class="project-item">A project item</li>
+          <li class="project-item">A project item</li>
+        </ul>
+        <div class="new-btn">New project +</div>
+
+<!------------- NEW PROJECT FORM -->
+
+        <form class="form-new-project padding d-flex">
+          <input type="text" placeholder="Project Name">
+          <button type="submit" class="btn">Add project</button>
+        </form>
+      </div>
+
+<!----------------------------------------- NEW TO-DOS FORM -->
+
+      <div class="todo-items">
+
+        <div class="new-btn">Add New +</div>
+
+        <form action="" class="new-todo-form d-flex">
+          <input type="text" placeholder="Title">
+          <label for="date">Due date:</label>
+          <input type="date" id="date" name="trip-start"
+          value="2018-07-22"
+          min="2018-01-01" max="2018-12-31">
+          <label for="priority">Select priority:</label>
+          <select name="priority" id="priority">
+            <option value="none">None</option>
+            <option value="none">Medium</option>
+            <option value="none">High</option>
+          </select>
+          <label for="project">Select proyect:</label>
+          <select name="project" id="project">
+            <option value="none">None</option>
+          </select>
+          <textarea name="description" id="description" cols="30" rows="5" placeholder="Description"></textarea>        
+          <button type="submit" class="btn">Submit</button>
+        </form>
+
+<!-------------------------------------------- TO-DOS CONTAINER -->
+
+        <div class="cards-container">
+          <div class="card padding box-shadow">
+            <div class="overlay d-flex">Show and edit</div>
+            <h3 class="card-title">This is a to do title</h3>
+            <p class="card-date">05 - May - 2050</p>
+          </div>
+          <div class="card padding box-shadow high-priority">
+            <div class="overlay d-flex">Show and edit</div>
+            <h3 class="card-title">This is a to do title</h3>
+            <p class="card-date">05 - May - 2050</p>
+          </div>
+          <div class="card padding box-shadow medium-priority">
+            <div class="overlay d-flex">Show and edit</div>
+            <h3 class="card-title">This is a to do title</h3>
+            <p class="card-date">05 - May - 2050</p>
+          </div>
+          <div class="card padding box-shadow">
+            <div class="overlay d-flex">Show and edit</div>
+            <h3 class="card-title">This is a to do title</h3>
+            <p class="card-date">05 - May - 2050</p>
+          </div>
+        </div>
+      </div>
+
+<!------------------------------------------------- POP-UP FOR -->
+
+      <div class="popup d-flex">
+        <div class="popup-content">
+          <h1 class="popup-title">This is a todo-title</h1>
+          <p class="popup-info">Due Date: <span class="info-content">05/07/2050</span> </p>
+          <p class="popup-info">Priority: <span class="info-content">None</span></p>
+          <p class="popup-info">Poject: <span class="info-content">None</span></p></p>
+          <p class="popup-info">Description: <span class="info-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet commodo nulla, 
+            sed lobortis ligula. Praesent cursus fringilla mi, eu feugiat ligula pretium sit amet.</span></p> </p>
+          <h3 class="edit-subtitle padding">Edit</h3>
+
+<!------------- FORM -->
+
+          <form class="popup-form d-flex">
+            <label for="date">Due date:</label>
+            <input type="date" id="date" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+            <label for="priority">Select priority:</label>
+            <select name="priority" id="priority">
+              <option value="hello">None</option>
+              <option value="cal">Medium</option>
+              <option value="yas">High</option>
+            </select>
+            <label for="project">Select proyect:</label>
+            <select name="project" id="project">
+              <option value="none">None</option>
+            </select>
+            <input type="text" placeholder="Edit title">
+            <textarea name="description" id="description" cols="30" rows="5" placeholder="Description"></textarea>   
+            <button type="submit" class="btn">Submit</button>
+          </form>
+
+          <a href="#" class="delete-btn">Delete</a>
+          <a href="#" class="close-popup">&times;</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
