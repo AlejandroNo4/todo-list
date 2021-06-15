@@ -1,5 +1,3 @@
-export { allTodos };
-
 function Todo(name, project, dueDate, priority, description, id) {
   this.name = name;
   this.project = project;
@@ -13,8 +11,8 @@ const allTodos = () => {
   let todos = [];
   return {
     setTodo: (name, project, dueDate, priority, description) => {
-      if (localStorage.getItem("todos")) {
-        todos = JSON.parse(localStorage.getItem("todos"));
+      if (localStorage.getItem('todos')) {
+        todos = JSON.parse(localStorage.getItem('todos'));
       } else {
         todos = [];
       }
@@ -25,23 +23,23 @@ const allTodos = () => {
         dueDate,
         priority,
         description,
-        id
+        id,
       );
       todos.push(newTodo);
 
-      localStorage.setItem("todos", JSON.stringify(todos));
+      localStorage.setItem('todos', JSON.stringify(todos));
     },
     getTodos: () => {
-      if (localStorage.getItem("todos")) {
-        todos = JSON.parse(localStorage.getItem("todos"));
+      if (localStorage.getItem('todos')) {
+        todos = JSON.parse(localStorage.getItem('todos'));
       } else {
         todos = [];
       }
       return todos;
     },
     deleteTodo: (todoId) => {
-      if (localStorage.getItem("todos")) {
-        todos = JSON.parse(localStorage.getItem("todos"));
+      if (localStorage.getItem('todos')) {
+        todos = JSON.parse(localStorage.getItem('todos'));
       } else {
         todos = [];
       }
@@ -49,14 +47,14 @@ const allTodos = () => {
       for (let i = 0; i < todos.length; i += 1) {
         if (todoId === todos[i].id) {
           todos.splice(i, 1);
-          localStorage.setItem("todos", JSON.stringify(todos));
+          localStorage.setItem('todos', JSON.stringify(todos));
           window.location.reload();
         }
       }
     },
     editTodo: (todoId, name, project, dueDate, priority, description) => {
-      if (localStorage.getItem("todos")) {
-        todos = JSON.parse(localStorage.getItem("todos"));
+      if (localStorage.getItem('todos')) {
+        todos = JSON.parse(localStorage.getItem('todos'));
       } else {
         todos = [];
       }
@@ -68,10 +66,12 @@ const allTodos = () => {
           todos[i].dueDate = dueDate;
           todos[i].priority = priority;
           todos[i].description = description;
-          localStorage.setItem("todos", JSON.stringify(todos));
+          localStorage.setItem('todos', JSON.stringify(todos));
           window.location.reload();
         }
       }
     },
   };
 };
+
+export default allTodos;
