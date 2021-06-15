@@ -7,14 +7,13 @@ function Project(title, id) {
 
 const allProjects = () => {
   let projects = [];
-  const defualtProject = new Project("Default", 1);
-  projects.push(defualtProject);
+
   return {
     setProject: (title) => {
       if (localStorage.getItem("projects")) {
         projects = JSON.parse(localStorage.getItem("projects"));
       } else {
-        projects = [];
+        projects = [{ title: "Default", id: 1 }];
       }
       const id = projects.length + 1;
 
@@ -27,7 +26,7 @@ const allProjects = () => {
       if (localStorage.getItem("projects")) {
         projects = JSON.parse(localStorage.getItem("projects"));
       } else {
-        projects = [];
+        projects = [{ title: "Default", id: 1 }];
       }
       return projects;
     },

@@ -17,8 +17,6 @@ const addNewProject = () => {
   formProject.appendChild(submitProject);
   formProject.classList.add("d-none", "padding");
 
-  // -----------------------------------------NEW PROJECT BUTTON
-
   const NewProjectBtn = document.createElement("div");
   NewProjectBtn.innerText = "New project +";
   NewProjectBtn.classList.add("new-btn");
@@ -32,7 +30,7 @@ const addNewProject = () => {
       formProject.classList.add("d-none")
     }
   });
-  // -----------------------------------------FORM EVENT LISTENER
+  
   formProject.addEventListener("submit", () => {
     const title = inputProjectName.value;
     projectsObj.setProject(title);
