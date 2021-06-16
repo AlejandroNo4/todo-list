@@ -2,18 +2,24 @@
 
 # Project Name
 
-> One paragraph statement about the project.
+> This project is a basic to-do list.
 
 <p align="center">
   <img src="app_screenshot.png" width="800">
 </p>
 
-Additional description about the project and its features.
+The user can create (and delete) projects. Within each project, it is possible to create to-dos.
+
+Each to-do consists of a title, due date, description, and priority. The priority will define the background color of each to-do. Red for high and yellow for medium priority.
+
+Once a to-do it's created, it will also be possible to edit or delete it. When editing, it is possible to make changes in all fields, including the project to which it belongs.
+
+It is also important to emphasize that if the user deletes a project, the notes that belong to it also will be.
 
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://alejandrono4.github.io/todo-list/)
 
 
 ## Getting Started
