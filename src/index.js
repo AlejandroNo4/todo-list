@@ -25,7 +25,6 @@ const aside = () => {
     const projectItem = document.createElement('li');
     projectItem.classList.add('project-item');
 
-    projectItem.classList.remove('bg-dark');
     projectItem.innerText = element.title;
     projectsList.appendChild(projectItem);
 

@@ -8,19 +8,10 @@
   text-decoration: none;
   font-family: "Assistant", sans-serif;
 
-  --main-color: #223c60;
-  --secondary-color: #ffce13;
-  --important-color: #ff0f39;
+  --main-color: #050833;
+  --medium-color: #ff0;
+  --high-color: #f41f4e;
   --detail-color: #f0f1e5;
-  --title-font: "Roboto Slab", serif;
-}
-
-.borderr {
-  border: 2px solid red;
-}
-
-.bordery {
-  border: 2px solid yellow;
 }
 
 .d-flex {
@@ -39,21 +30,20 @@
   padding: 15px;
 }
 
-.bg-dark {
-  background-color: black;
-  color: var(--detail-color);
-}
-
 .btn {
   min-width: 150px;
   margin: 5px;
   align-self: center;
-  border-radius: 3px;
-  border: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
-  background-color: var(--main-color);
-  padding: 5px;
+  border: 2px solid transparent;
+  color: inherit;
+  background-color: inherit;
+  padding: 7px 5px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: 2px solid white;
 }
 
 .box-shadow {
@@ -67,14 +57,7 @@
 }
 
 body {
-  background: var(--main-color);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(240, 241, 229, 1) 0%,
-      rgba(251, 249, 249, 1) 51%,
-      rgba(240, 241, 229, 1) 100%
-    );
+  background: var(--detail-color);
 }
 
 input,
@@ -91,7 +74,7 @@ textarea {
 .main-title {
   color: var(--main-color);
   font-size: 3em;
-  font-family: var(--title-font);
+  font-weight: bold;
 }
 
 .aside-projects {
@@ -121,6 +104,7 @@ textarea {
 
 .todo-items {
   min-height: 100vh;
+  border-left: 1px solid var(--main-color);
   width: 100%;
   text-align: center;
 }
@@ -145,11 +129,8 @@ textarea {
   text-align: left;
 }
 
-/* TO DO ITEMS */
-
-.project-title {
-  font-size: 3em;
-  color: var(--main-color);
+.submit-btn:hover {
+  border: 2px solid var(--main-color);
 }
 
 .cards-container {
@@ -162,9 +143,13 @@ textarea {
   border-radius: 3px;
   color: var(--detail-color);
   justify-content: space-between;
-  margin: 15px 0;
+  margin: 10px 0;
   align-items: center;
   text-align: left;
+  box-shadow:
+    0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
 .title-date {
@@ -176,25 +161,25 @@ textarea {
 }
 
 .high-priority {
-  background-color: var(--important-color);
+  background-color: var(--high-color);
 }
 
 .medium-priority {
-  background-color: var(--secondary-color);
+  background-color: var(--medium-color);
   color: var(--main-color);
+}
+
+.medium-priority .btn:hover {
+  border: 2px solid black;
 }
 
 .card-title {
   font-size: 1.5em;
 }
 
-.card:hover {
-  filter: brightness(0.8);
-}
-
 .delete-project-btn {
-  border: 2px solid red;
-  color: red;
+  border: 2px solid var(--high-color);
+  color: var(--high-color);
   padding: 5px;
   border-radius: 3px;
   width: auto;

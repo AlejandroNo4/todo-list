@@ -13,7 +13,7 @@ const mainTodos = (projectTitle, projectId) => {
   const todosElements = allTodos();
 
   const nameTitle = document.createElement('h1');
-  nameTitle.classList.add('project-title');
+  nameTitle.classList.add('main-title', 'padding');
   nameTitle.innerText = projectTitle;
 
   const cardsContainer = document.createElement('div');

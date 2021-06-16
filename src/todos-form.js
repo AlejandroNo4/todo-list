@@ -14,6 +14,21 @@ const todoForm = () => {
   const dueDate = document.createElement('input');
   dueDate.type = 'date';
   dueDate.setAttribute('required', '');
+
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1;
+  const yyyy = today.getFullYear();
+  if (dd < 10) {
+    dd = `0${dd}`;
+  }
+  if (mm < 10) {
+    mm = `0${mm}`;
+  }
+  today = `${yyyy}-${mm}-${dd}`;
+
+  dueDate.setAttribute('min', today);
+
   const priority = document.createElement('select');
   const priorityNone = document.createElement('option');
   priorityNone.innerText = 'None';
@@ -40,7 +55,7 @@ const todoForm = () => {
   description.setAttribute('required', '');
 
   const submitBtn = document.createElement('button');
-  submitBtn.classList.add('btn');
+  submitBtn.classList.add('btn', 'submit-btn');
   submitBtn.innerText = 'Create to-do';
 
   const labelDate = document.createElement('label');
@@ -95,19 +110,19 @@ const todoForm = () => {
       submitBtn.innerText = 'Edit';
 
       newTodoForm.addEventListener('submit', () => {
-        const nameVal = name.value;
-        const projectVal = projectsInput.value;
-        const dueDateVal = dueDate.value;
-        const priorityVal = priority.value;
-        const descriptionVal = description.value;
+        const nameEdit = name.value;
+        const projectEdit = projectsInput.value;
+        const dueDateEdit = dueDate.value;
+        const priorityEdit = priority.value;
+        const descriptionEdit = description.value;
 
         todosElements.editTodo(
           todoId,
-          nameVal,
-          projectVal,
-          dueDateVal,
-          priorityVal,
-          descriptionVal,
+          nameEdit,
+          projectEdit,
+          dueDateEdit,
+          priorityEdit,
+          descriptionEdit,
         );
       });
     },

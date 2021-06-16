@@ -11,7 +11,7 @@ const addNewProject = () => {
   inputProjectName.setAttribute('required', '');
   inputProjectName.maxLength = 25;
   submitProject.innerText = 'Create';
-  submitProject.classList.add('btn');
+  submitProject.classList.add('btn', 'submit-btn');
   formProject.appendChild(inputProjectName);
   formProject.appendChild(submitProject);
   formProject.classList.add('d-none', 'padding');
