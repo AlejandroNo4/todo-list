@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Assistant", sans-serif;
+
+  --main-color: #050833;
+  --medium-color: #ff0;
+  --high-color: #f41f4e;
+  --detail-color: #f0f1e5;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.d-none {
+  display: none;
+}
+
+.padding {
+  padding: 15px;
+}
+
+.btn {
+  min-width: 150px;
+  margin: 5px;
+  align-self: center;
+  border: 2px solid transparent;
+  color: inherit;
+  background-color: inherit;
+  padding: 7px 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: 2px solid white;
+}
+
+.box-shadow {
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  background: var(--detail-color);
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--main-color);
+  margin: 15px 0;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* ASIDE */
+
+.main-title {
+  color: var(--main-color);
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.aside-projects {
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-item {
+  padding: 0.6em 2.3em;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--main-color);
+  background-image: linear-gradient(45deg, transparent 50%, #000 50%);
+  background-position: 25%;
+  background-size: 400%;
+  -webkit-transition: 500ms ease-in-out, color 500ms ease-in-out;
+  transition: 500ms ease-in-out, color 500ms ease-in-out;
+  width: 190px;
+  margin: 5px auto;
+  font-weight: bold;
+}
+
+.project-item:hover {
+  color: var(--detail-color);
+  background-position: 100%;
+}
+
+.todo-items {
+  min-height: 100vh;
+  border-left: 1px solid var(--main-color);
+  width: 100%;
+  text-align: center;
+}
+
+/* NEW ITEM FORM */
+
+.new-btn {
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--main-color);
+  margin: 25px auto;
+  text-align: center;
+  font-weight: bold;
+  user-select: none;
+}
+
+.new-todo-form {
+  flex-direction: column;
+  max-width: 50%;
+  margin: 35px auto;
+  padding: 25px;
+  text-align: left;
+}
+
+.submit-btn:hover {
+  border: 2px solid var(--main-color);
+}
+
+.cards-container {
+  padding: 0 15px;
+}
+
+.card {
+  position: relative;
+  background-color: var(--main-color);
+  border-radius: 3px;
+  color: var(--detail-color);
+  justify-content: space-between;
+  margin: 10px 0;
+  align-items: center;
+  text-align: left;
+  box-shadow:
+    0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.title-date {
+  width: 40%;
+}
+
+.card-description {
+  width: 40%;
+}
+
+.high-priority {
+  background-color: var(--high-color);
+}
+
+.medium-priority {
+  background-color: var(--medium-color);
+  color: var(--main-color);
+}
+
+.medium-priority .btn:hover {
+  border: 2px solid black;
+}
+
+.card-title {
+  font-size: 1.5em;
+}
+
+.delete-project-btn {
+  border: 2px solid var(--high-color);
+  color: var(--high-color);
+  padding: 5px;
+  border-radius: 3px;
+  width: auto;
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.delete-project-btn:hover {
+  cursor: pointer;
+}
