@@ -2,64 +2,76 @@
 
 # Project Name
 
-> One paragraph statement about the project.
+> This project is a basic to-do list.
 
-![screenshot](./app_screenshot.png)
+<p align="center">
+  <img src="app_screenshot.png" width="800">
+</p>
 
-Additional description about the project and its features.
+The user can create (and delete) projects. Within each project, it is possible to create to-dos.
 
-## Built With
+Each to-do consists of a title, due date, description, and priority. The priority will define the background color of each to-do. Red for high and yellow for medium priority.
 
-- Major languages
-- Frameworks
-- Technologies used
+Once a to-do it's created, it will also be possible to edit or delete it. When editing, it is possible to make changes in all fields, including the project to which it belongs.
+
+It is also important to emphasize that if the user deletes a project, the notes that belong to it also will be.
+
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://alejandrono4.github.io/todo-list/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+- At first, you have to clone this repository. Open your terminal and paste this without the $ sign.
 
-### Setup
+      $ git clone https://github.com/AlejandroNo4/todo-list.git
 
-### Install
+- Now that you have the repository in your local machine. Change the direction of the local file with your terminal. Just type "$ cd" (without the $ sign) and the path to reach the todo-list folder.<br/>
+  Something like:
 
-### Usage
+        $ cd User/Documents/todo-list
 
-### Run tests
+- Now to install Webpack, run in your terminal:
 
-### Deployment
+        $ npm install webpack webpack-cli --save-dev
 
+- You are done with the installations! Now to run the project, first type:
 
+        $ code .
 
-## Authors
+- This must open Vs code. For now, keep it open. Go back to your terminal and now run: 
+
+        $ npm run build
+
+- Now back on Vs Code, open the "dist" folder. Then right-click on the index.html file and click on open with Live Server.
+
+<br/>
+
+## Built With
+
+- Javascript
+- VS Code
+- Git
+- HTML
+- CSS
+
+## Author
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@AlejandroNo4](https://github.com/AlejandroNo4)
+- Twitter: [@Alejand80002666](https://twitter.com/Alejand80002666)
+- LinkedIn: [Alejandro Contreras Rodriguez](https://www.linkedin.com/in/alejandro-contreras-rodriguez-b524821b5)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [Issues page](https://github.com/AlejandroNo4/todo-list/issues).
 
 ## Show your support
 
@@ -67,10 +79,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Based on the requirements from [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/todo-list)
+- Fonts from [google fonts](https://fonts.google.com/)
 
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
