@@ -4,29 +4,29 @@ function SessionConstructor(title, id) {
 }
 
 const sessionProjects = () => {
-  let session = [{ title: "Default", id: 1 }];
+  let session = [{ title: 'Default', id: 1 }];
   return {
     newSession: (title, id) => {
-      if (localStorage.getItem("session")) {
-        session = JSON.parse(localStorage.getItem("session"));
+      if (localStorage.getItem('session')) {
+        session = JSON.parse(localStorage.getItem('session'));
       } else {
-        session = [{ title: "Default", id: 1 }];
+        session = [{ title: 'Default', id: 1 }];
       }
       if (id === undefined || title === undefined) {
-        throw new Error("Session id or title is undefined!");
+        throw new Error('Session id or title is undefined!');
       }
-      if (title === "") {
-        throw new Error("Something went wrong, title must not be blank!");
+      if (title === '') {
+        throw new Error('Something went wrong, title must not be blank!');
       }
       const addingSession = new SessionConstructor(title, id);
       session = [addingSession];
-      localStorage.setItem("session", JSON.stringify(session));
+      localStorage.setItem('session', JSON.stringify(session));
     },
     getSession: () => {
-      if (localStorage.getItem("session")) {
-        session = JSON.parse(localStorage.getItem("session"));
+      if (localStorage.getItem('session')) {
+        session = JSON.parse(localStorage.getItem('session'));
       } else {
-        session = [{ title: "Default", id: 1 }];
+        session = [{ title: 'Default', id: 1 }];
       }
       return session;
     },
