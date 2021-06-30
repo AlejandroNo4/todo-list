@@ -1,5 +1,8 @@
 {
   "name": "my-webpack-project",
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "version": "1.0.0",
   "description": "My webpack project",
   "main": "index.js",
