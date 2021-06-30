@@ -13,9 +13,9 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  let projects = [{ title: "Default", id: 1 }];
+  let projStorageReset = [{ title: "Default", id: 1 }];
   JSON.parse(localStorage.getItem("projects"));
-  localStorage.setItem("projects", JSON.stringify(projects));
+  localStorage.setItem("projects", JSON.stringify(projStorageReset));
 });
 
 afterAll(() => {

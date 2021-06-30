@@ -2,24 +2,15 @@ import sessionProjects from "../src/projects-session";
 
 let session;
 
-class LocalStorageMock {
-  constructor() {
-    this.store = {};
-  }
-
-  getItem(key) {
-    return this.store[key] || null;
-  }
-
-  setItem(key, value) {
-    this.store[key] = String(value);
-  }
-}
-
-global.localStorage = new LocalStorageMock();
 
 beforeEach(() => {
   session = sessionProjects();
+});
+
+afterEach(() => {
+  let sessionReset = [{ title: "Default", id: 1 }];
+  JSON.parse(localStorage.getItem("projects"));
+  localStorage.setItem("session", JSON.stringify(sessionReset));
 });
 
 it("The getSession function will always return title and id", () => {
