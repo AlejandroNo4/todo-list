@@ -51,6 +51,16 @@ To get a local copy up and running follow these simple example steps.
 
 <br/>
 
+## Run Tests
+
+- To run tests, you have to install Jest. Please run:
+
+        $ npm install --save-dev jest
+
+- Now, type:
+
+        $ npm run test
+
 ## Built With
 
 - Javascript

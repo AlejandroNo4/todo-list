@@ -16,6 +16,17 @@ const allTodos = () => {
       } else {
         todos = [];
       }
+
+      if (
+        name === undefined
+        || project === undefined
+        || dueDate === undefined
+        || priority === undefined
+        || description === undefined
+      ) {
+        throw new Error('One or more properties are undefined!');
+      }
+
       const id = todos.length + 1;
       const newTodo = new Todo(
         name,
@@ -44,6 +55,10 @@ const allTodos = () => {
         todos = [];
       }
 
+      if (todoId === undefined) {
+        throw new Error('The to-do id is undefined!');
+      }
+
       for (let i = 0; i < todos.length; i += 1) {
         if (todoId === todos[i].id) {
           todos.splice(i, 1);
@@ -57,6 +72,17 @@ const allTodos = () => {
         todos = JSON.parse(localStorage.getItem('todos'));
       } else {
         todos = [];
+      }
+
+      if (
+        todoId === undefined
+        || name === undefined
+        || project === undefined
+        || dueDate === undefined
+        || priority === undefined
+        || description === undefined
+      ) {
+        throw new Error('One or more properties are undefined!');
       }
 
       for (let i = 0; i < todos.length; i += 1) {

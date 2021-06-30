@@ -1,5 +1,8 @@
 {
   "name": "my-webpack-project",
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "version": "1.0.0",
   "description": "My webpack project",
   "main": "index.js",
@@ -7,7 +10,8 @@
     "build": "webpack --mode=production --node-env=production --watch",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -30,6 +34,7 @@
     "eslint": "^7.28.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
+    "jest": "^27.0.6",
     "style-loader": "^2.0.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -38,5 +43,8 @@
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "babel-jest": "^27.0.6"
   }
 }
