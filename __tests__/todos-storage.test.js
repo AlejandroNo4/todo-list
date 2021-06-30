@@ -1,4 +1,3 @@
-import { it } from "@jest/globals";
 import allTodos from "../src/todos-storage";
 
 let todo;

@@ -1,4 +1,3 @@
-import { afterEach, expect, it } from "@jest/globals";
 import allProjects from "../src/projects-storage";
 
 let projects;
