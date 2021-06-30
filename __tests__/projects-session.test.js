@@ -2,7 +2,6 @@ import sessionProjects from "../src/projects-session";
 
 let session;
 
-
 beforeEach(() => {
   session = sessionProjects();
 });
